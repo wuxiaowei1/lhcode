@@ -1,0 +1,7 @@
+server:
+  test: https://lh-launch-platform.dev1.weike.fm
+request_headers:
+  Accept-Encoding: gzip, deflate
+  Accept-Language: zh-CN,zh;q=0.9
+  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjQzNCwibmFtZSI6Ilx1NTQzNFx1NWMwZlx1NGYxZiIsInR5cGUiOiJBY2NvdW50VG9rZW4iLCJleHAiOjE2NTQ5NDEyMzl9.ZNWlqKWZvC2SkjyQKluCgoaPDmve_Bh7GeOzMYCIJ0w
