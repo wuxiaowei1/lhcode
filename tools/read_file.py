@@ -1,5 +1,6 @@
 import xlrd
 import yaml
+import os
 from pathlib import Path
 from tools import extractor
 class ReadFile:
@@ -19,10 +20,19 @@ class ReadFile:
 
     @classmethod
     def read_testcase(cls):
-        book = xlrd.open_workbook(cls.read_config("$.file_path.test_case"))
+        print(os.getcwd())
+        print("111")
+        print(cls.read_config("$.file_path.test_case"))
+        book = xlrd.open_workbook('data/case_data.xls')
+        print(book)
         table = book.sheet_by_index(0)
         for norw in range(1, table.nrows):
             if table.cell_value(norw, 4) != "否":
                 value = table.row_values(norw)
                 value.pop(4)
+                # print(value)
                 yield value
+
+# if __name__ == '__main__':
+#     a = ReadFile.read_testcase()
+#     print(a)

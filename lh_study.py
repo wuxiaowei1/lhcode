@@ -20,4 +20,12 @@
 #     pytest.main(['lh_study.py',  '--alluredir', 'lhcode/report/data'])
 #     os.system('allure generate lhcode/report/data -o lhcode/report/html --clean')
 #     os.system('allure serve lhcode/report/data')
-print(191.42*1.1)
+import xlrd
+
+book = xlrd.open_workbook('data/case_data.xls')
+table = book.sheet_by_index(0)
+for norw in range(1, table.nrows):
+    if table.cell_value(norw, 4) != "否":
+        value = table.row_values(norw)
+        value.pop(4)
+        print(value)
