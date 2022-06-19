@@ -10,7 +10,7 @@ class Transmission:
 
 class Client(Session):
     header = ReadFile.read_config('$.request_headers')
-    def baes_request(self, url, method, parametric_key, header=None, data=None, file=None):
+    def baes_request(self, url, method, parametric_key, header=None, data=None, file=None, ):
         if parametric_key == Transmission.PARAMS:
             extra_args = {Transmission.PARAMS: data}
         elif parametric_key == Transmission.DATA:
@@ -61,5 +61,5 @@ class Client(Session):
         response = self.baes_request(url, method, parametric_key, headers, data)
         return response
 
-# if __name__ == '__main__':
-#      Client().action()
+if __name__ == '__main__':
+     Client().action()
